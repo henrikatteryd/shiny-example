@@ -1,8 +1,14 @@
-# server.R
 
-library(shiny)
+shinyServer(function(input, output) {
+  
+  output$indexplot <- renderPlot({
+    plt <- ggplot(data = df)
+    plt <- plt + geom_line(aes_string(x = "Day", 
+                                      y = input$index
+                                      ), col = "dodgerblue")
+    plt
+  })
+  
+  
+})
 
-# 
-
-# Define server logic required to generate and plot a random distribution
-shinyServer(function(input, output) {})
