@@ -1,4 +1,6 @@
 
+# Server
+
 shinyServer(function(input, output) {
   
   output$indexplot <- renderPlot({
@@ -8,7 +10,5 @@ shinyServer(function(input, output) {
                                       ), col = "dodgerblue")
     plt
   })
-  
-  
 })
 

@@ -1,4 +1,5 @@
-# ui.R
+
+# UI
 
 shinyUI(fluidPage(
   titlePanel("Stock Index Closing Prices"),
